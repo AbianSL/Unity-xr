@@ -2,25 +2,22 @@ using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Renderer sphereRenderer;
+
+    private void Start()
     {
-        
+        sphereRenderer = GetComponentInChildren<Renderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeToRed()
     {
-        
-    }
-    
-    void OnPointerEnter()
-    {
-        GetComponent<Renderer>().material.color = Color.green;
+        if (sphereRenderer != null)
+            sphereRenderer.material.color = Color.red;
     }
 
-    void OnPointerExit()
+    public void ChangeToWhite()
     {
-        GetComponent<Renderer>().material.color = Color.red;
+        if (sphereRenderer != null)
+            sphereRenderer.material.color = Color.white;
     }
 }

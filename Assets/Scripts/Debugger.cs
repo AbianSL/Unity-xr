@@ -5,16 +5,15 @@ public class Debugger : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-
-    void OnPointerClick()
+    public void OnPointerClick()
     {
         Debug.Log("Object clicked: " + gameObject.name);
     }
